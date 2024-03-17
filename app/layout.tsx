@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import SiteHeader from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link rel="icon" href="/algoridam-favicon.svg" />
+      </head>
+      <body className="bg-gradient-custom from-custom-start to-custom-endbg-gradient-custom to-custom-end">
+        <SiteHeader/>
+        {children}
+        </body>
     </html>
   );
 }
