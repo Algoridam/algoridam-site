@@ -1,21 +1,32 @@
 import React from 'react'
 import Image from 'next/image';
+import Link from 'next/link';
 
 const SiteHeader = () => {
   return (
-    <div className='flex flex-col justify-center items-center mt-10'>
-      <ul className="flex flex-col md:flex-row gap-4 md:gap-20 items-center justify-center">
-        <li>Home</li>
-        <li>Services</li>
-        <li>
-          {/* Adjusting Image component for responsiveness might need additional CSS or inline styles if the component doesn't directly support Tailwind's responsive classes */}
-          <Image src="/algoridam-logo.svg" alt="Vercel Logo" width={250} height={50} layout="intrinsic" />
-        </li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
-      <hr className='w-3/4 md:w-1/2 mt-3' />
-    </div>
+    <header className='flex flex-col justify-center items-center pt-10 w-[90%] mx-auto'>
+      <nav className="grid grid-cols-3 items-center justify-between w-full">
+        <ul className='flex gap-7 place-self-start'>
+          <li><Link className='cursor-pointer hover:underline' href='/about'>About us</Link></li>
+          <li><Link className='cursor-pointer hover:underline' href='/work'>Our work</Link></li>
+          <li><Link className='cursor-pointer hover:underline' href='/services'>Services</Link></li>
+        </ul>
+          <div className='place-self-center cursor-pointer'>
+            <Link href={'/'}>
+              <Image src="/algoridam-logo.svg" alt="Algoridam Logo" width={180} height={50} />
+            </Link>
+          </div>
+        <div className='flex items-center gap-8 place-self-end'>
+          <button className='border border-[#E39CD1] bg-transparent py-3 px-6 rounded-full btn-shadow'>
+            Let's talk
+          </button>
+          <div className='flex items-center gap-2'>
+            <span className='uppercase'>En</span>
+            <span>v</span>
+          </div>
+        </div>
+      </nav>
+    </header>
   )
 }
 
