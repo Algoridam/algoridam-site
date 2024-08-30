@@ -18,7 +18,7 @@ const SiteHeader = () => {
           </div>
         <div className='flex items-center gap-8 place-self-end'>
           <button className='border border-[#E39CD1] bg-transparent py-3 px-6 rounded-full btn-shadow'>
-            Let's talk
+            Let&rsquo;s talk
           </button>
           <div className='flex items-center gap-2'>
             <span className='uppercase'>En</span>

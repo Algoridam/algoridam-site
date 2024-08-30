@@ -22,7 +22,7 @@ const Contact = () => {
       <h1 className='text-6xl font-medium text-center'>Get in touch</h1>
       <p className='mt-4 text-center tracking-wide opacity-70'>We specialize in creating custom software solutions that empower <br /> businesses to achieve their unique goals.</p>
       <div className='mt-16 w-[760px] bg-white bg-opacity-5 border border-white border-opacity-20 px-8 py-10 rounded-[40px]'>
-        <p className='tracking-wide opacity-70 mb-5 text-xl font-light'>We're excited to hear from you and discuss how we can help with your project or answer any questions you may have.</p>
+        <p className='tracking-wide opacity-70 mb-5 text-xl font-light'>We&rsquo;re excited to hear from you and discuss how we can help with your project or answer any questions you may have.</p>
         <form className="form">
           <input
               type="text"

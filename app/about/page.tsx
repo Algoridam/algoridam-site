@@ -110,8 +110,8 @@ const AboutPage = () => {
         <h1 className='text-6xl text-center'>Why Algoridam</h1>
         <div className='mt-16 grid grid-cols-3 gap-4 w-3/4 mx-auto'>
           {
-              data.map((service) => (
-                <div className='bg-white bg-opacity-5 border border-white border-opacity-20 p-9 rounded-3xl'>
+              data.map((service, index) => (
+                <div key={index} className='bg-white bg-opacity-5 border border-white border-opacity-20 p-9 rounded-3xl'>
                   <div className='p-2 rounded-full border border-white border-opacity-20 mb-8 w-max'>
                     <Image src="/arrow-up-right.svg" alt="arrow" width={28} height={28} layout="intrinsic" />
                   </div>
@@ -125,7 +125,7 @@ const AboutPage = () => {
 
       <section className='py-[200px] case-study-background'>
         <div className='flex justify-between w-[90%] max-w-7xl mx-auto'>
-          <h1 className='text-6xl'>Who You're Getting <br /> Into Business With</h1>
+          <h1 className='text-6xl'>Who You&rsquo;re Getting <br /> Into Business With</h1>
           <div className='flex items-center gap-5'>
             <div className='p-2 rounded-full border border-white border-opacity-20 mb-8 w-max cursor-pointer select-none hover:bg-white hover:bg-opacity-5 transition-all' onClick={onscrollLeft}>
               <Image src="/arrow-left.svg" alt="arrow" width={28} height={28} layout="intrinsic" />
@@ -145,8 +145,8 @@ const AboutPage = () => {
           style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
         >
           {
-            caseStudies.map((study) => (
-              <div className='bg-white bg-opacity-5 border border-white border-opacity-20 p-9 rounded-[48px] min-w-[460px]'>
+            caseStudies.map((study, index) => (
+              <div key={index} className='bg-white bg-opacity-5 border border-white border-opacity-20 p-9 rounded-[48px] min-w-[460px]'>
                 <Image src="/sample-image.png" alt="arrow" className='w-full h-[450px] rounded-3xl mb-8 object-cover' width={100} height={400} />
                 <div className='flex items-center justify-between w-full'>
                   <p className='text-2xl font-medium'>{study.name}</p>

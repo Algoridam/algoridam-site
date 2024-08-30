@@ -30,8 +30,8 @@ const CaseStudies = () => {
         <p className='mt-4 text-center tracking-wide opacity-70'>Discover our case studies to delve into real-world examples of our work. <br /> Gain insights and inspiration from our documented successes.</p>
         <div className='mt-16 grid grid-cols-2 gap-14 w-3/4 mx-auto'>
           {
-            caseStudies.map((study) => (
-              <div className='bg-white bg-opacity-5 border border-white border-opacity-20 p-9 rounded-[48px] z-10'>
+            caseStudies.map((study, index) => (
+              <div key={index} className='bg-white bg-opacity-5 border border-white border-opacity-20 p-9 rounded-[48px] z-10'>
                 <Image src="/sample-image.png" alt="arrow" className='w-full h-full rounded-3xl mb-8 object-contain' width={100} height={200} layout="intrinsic" />
                 <div className='flex items-center justify-between w-full'>
                   <p className='text-2xl font-medium'>{study.name}</p>

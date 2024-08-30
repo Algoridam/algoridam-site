@@ -23,8 +23,8 @@ const Services = () => {
         <p className='mt-4 text-center tracking-wide opacity-70'>Transforming bold ideas into tangible results takes vision and determination. By <br /> turning ambitious dreams into reality, we achieve significant and lasting impact.</p>
         <div className='mt-16 grid grid-cols-3 gap-4 w-3/4 mx-auto'>
           {
-            services.map((service) => (
-              <div className='bg-white bg-opacity-5 border border-white border-opacity-20 p-9 rounded-3xl'>
+            services.map((service, index) => (
+              <div key={index} className='bg-white bg-opacity-5 border border-white border-opacity-20 p-9 rounded-3xl'>
                 <div className='p-2 rounded-full border border-white border-opacity-20 mb-8 w-max'>
                   <Image src="/arrow-up-right.svg" alt="arrow" width={28} height={28} layout="intrinsic" />
                 </div>
