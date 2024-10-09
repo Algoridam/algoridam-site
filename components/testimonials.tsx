@@ -79,7 +79,7 @@ const Testimonials = () => {
               <p className='text-xl'>logo</p>
             </div>
             <p className='opacity-70 text-center my-7'>
-              &ldquo;Algoridam's solutions helped us increase our productivity significantly. We now have better control over our processes, thanks to their innovative approach.&ldquo;
+              &ldquo;Algoridam&lsquo;s solutions helped us increase our productivity significantly. We now have better control over our processes, thanks to their innovative approach.&ldquo;
             </p>
             <p className='font-semibold'>Jane Doe</p>
             <p className='opacity-70'>COO of Innovative Solutions</p>
@@ -97,7 +97,7 @@ const Testimonials = () => {
               <p className='text-xl'>logo</p>
             </div>
             <p className='opacity-70 text-center my-7'>
-              &ldquo;The attention to detail and customer support provided by Algoridam are top-notch. We couldn't have asked for a better partner.&ldquo;
+              &ldquo;The attention to detail and customer support provided by Algoridam are top-notch. We couldn&lsquo;t have asked for a better partner.&ldquo;
             </p>
             <p className='font-semibold'>Alice Johnson</p>
             <p className='opacity-70'>CTO of Tech Pioneers</p>
