@@ -5,6 +5,7 @@ import Process from "@/components/process";
 import Services from "@/components/services";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
+import Testimonials from "@/components/testimonials";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <CaseStudies />
       </div>
       <div className="last-background">
+        <Testimonials />
         <Process />
         <Contact />
         <Footer />

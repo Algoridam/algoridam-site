@@ -10,8 +10,8 @@ const ServicesPage = () => {
     <main className='min-h-screen'>
       <div className='case-study-background'>
         <SiteHeader />
-        <div className='pt-[120px] pb-[200px] flex flex-col gap-[200px]'>
-          <Services />
+        <div className='pb-[20px] flex flex-col gap-[200px]'>
+          <Services isServicesPage={true} />
           <Process />
         </div>
       </div>

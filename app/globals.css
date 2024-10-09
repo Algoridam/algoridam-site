@@ -30,6 +30,10 @@ p {
   @apply font-light;
 }
 
+br {
+  @apply hidden md:block
+}
+
 /* styles.css */
 .hero-background {
   background:
@@ -132,11 +136,56 @@ p {
 }
 
 .glowing-oval {
-  @apply absolute z-10 w-full h-[783px] bg-[#090009] rounded-[50%];
+  /* @apply absolute z-10 w-full h-[783px] bg-[#090009] rounded-[50%]; */
+  @apply absolute z-10 w-full h-[500px] md:h-[783px] bg-[#090009] rounded-[50%];
+
   background: radial-gradient(59.33% 49.94% at 50% 50.06%, #0C0222 80%, #E750B7 100%);
 }
 
 .glowing-shadow {
   box-shadow: 0 0 60px 20px rgba(231, 72, 255, 0.5);
   box-shadow: 0px 4px 250px 0px #F58ED5;
+}
+
+.slide-track {
+  @apply w-full flex gap-20 overflow-hidden;
+
+  img {
+    width: 100px;
+    height: 100px;
+    animation: scroll 60s linear infinite;
+  }
+}
+
+.slider {
+  padding: 8em 2em;
+}
+
+@keyframes scroll {
+  0% {transform: translateX(0);}
+  100% {transform: translatex(-1000%)}
+}
+
+.linkEffect {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.linkEffect::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.linkEffect--rightToLeft:hover::after {
+  transform: translateX(0);
 }

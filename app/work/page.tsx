@@ -3,6 +3,7 @@ import CaseStudies from '@/components/case-studies';
 import Contact from '@/components/contact';
 import Footer from '@/components/footer';
 import SiteHeader from '@/components/header';
+import Testimonials from '@/components/testimonials';
 import React from 'react';
 
 const WorkPage = () => {
@@ -15,6 +16,7 @@ const WorkPage = () => {
         </div>
       </div>
       <div className="last-background">
+        <Testimonials />
         <Contact />
         <Footer />
       </div>
