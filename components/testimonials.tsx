@@ -65,7 +65,7 @@ const Testimonials = () => {
               <p className='text-xl'>logo</p>
             </div>
             <p className='opacity-70 text-center my-7'>
-              "Working with Algoridam has been a game-changer for our business. Their custom software solution streamlined our operations, saving us both time and money."
+              &ldquo;Working with Algoridam has been a game-changer for our business. Their custom software solution streamlined our operations, saving us both time and money.&ldquo;
             </p>
             <p className='font-semibold'>John Smith</p>
             <p className='opacity-70'>CEO of Tech Innovators Inc.</p>
@@ -79,7 +79,7 @@ const Testimonials = () => {
               <p className='text-xl'>logo</p>
             </div>
             <p className='opacity-70 text-center my-7'>
-              "Algoridam's solutions helped us increase our productivity significantly. We now have better control over our processes, thanks to their innovative approach."
+              &ldquo;Algoridam's solutions helped us increase our productivity significantly. We now have better control over our processes, thanks to their innovative approach.&ldquo;
             </p>
             <p className='font-semibold'>Jane Doe</p>
             <p className='opacity-70'>COO of Innovative Solutions</p>
@@ -97,7 +97,7 @@ const Testimonials = () => {
               <p className='text-xl'>logo</p>
             </div>
             <p className='opacity-70 text-center my-7'>
-              "The attention to detail and customer support provided by Algoridam are top-notch. We couldn't have asked for a better partner."
+              &ldquo;The attention to detail and customer support provided by Algoridam are top-notch. We couldn't have asked for a better partner.&ldquo;
             </p>
             <p className='font-semibold'>Alice Johnson</p>
             <p className='opacity-70'>CTO of Tech Pioneers</p>
