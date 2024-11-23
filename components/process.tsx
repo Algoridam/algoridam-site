@@ -62,7 +62,7 @@ const Process = () => {
         {translations.processes.intro}
       </p>
 
-      <div className="w-full overflow-x-hidden mt-16">
+      <div className="w-full overflow-hidden mt-16">
         <div
           ref={processesWrapperRef}
           className="flex gap-10 h-full w-[90%] mx-auto" 
