@@ -11,14 +11,6 @@ interface LanguageWrapperProps {
 const LanguageWrapper: React.FC<LanguageWrapperProps> = ({ children }) => {
   const { language } = useLanguageStore();
 
-  useEffect(() => {
-    document.body.style.overflowX = 'hidden';
-
-    return () => {
-      document.body.style.overflowX = '';
-    };
-  }, []);
-
   return (
     <>
       <Head>

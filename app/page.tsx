@@ -8,10 +8,18 @@ import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import Testimonials from "@/components/testimonials";
 import Image from 'next/image'
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
   const contactRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    document.body.style.overflowX = 'hidden';
+
+    return () => {
+      document.body.style.overflowX = '';
+    };
+  }, []);
 
   return (
     <main>
