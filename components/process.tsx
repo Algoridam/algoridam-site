@@ -31,8 +31,7 @@ const Process = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
     const processes = gsap.utils.toArray('.process');
-    const isLaptopOrLarger = windowWidth >= 1024;
-    const xPercent = isLaptopOrLarger ? -50 : -110 * (processes.length - 1);
+    const xPercent = windowWidth >= 1024 ? -50 : -100 * (processes.length - 1);
 
     gsap.to(processesWrapperRef.current, {
       xPercent: xPercent,
@@ -47,7 +46,7 @@ const Process = () => {
     }, processesContainerRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [windowWidth]);
 
   return (
     <section
