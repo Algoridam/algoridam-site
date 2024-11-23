@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import useLanguageStore from '@/zeustand/languageStore';
 
@@ -10,6 +10,14 @@ interface LanguageWrapperProps {
 
 const LanguageWrapper: React.FC<LanguageWrapperProps> = ({ children }) => {
   const { language } = useLanguageStore();
+
+  useEffect(() => {
+    document.body.style.overflowX = 'hidden';
+
+    return () => {
+      document.body.style.overflowX = '';
+    };
+  }, []);
 
   return (
     <>
