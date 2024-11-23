@@ -1,5 +1,5 @@
 'use client'
-import React ,{ useState } from 'react'
+import React ,{ useEffect, useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import useLanguageStore from '@/zeustand/languageStore';
@@ -33,6 +33,18 @@ const SiteHeader = ({ contactRef }: { contactRef: React.RefObject<HTMLElement> }
       });
     }
   };
+
+  useEffect(() => {
+    if (showMobileMenu) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [showMobileMenu]);
 
   return (
     <header className='flex flex-col justify-center items-center pt-6 lg:pt-10 w-[90%] mx-auto sticky z-40'>
@@ -135,7 +147,6 @@ const SiteHeader = ({ contactRef }: { contactRef: React.RefObject<HTMLElement> }
                     <span className='uppercase'>{language}</span>
                     <Image src="/chevron-down.svg" alt="chevron" width={24} height={24} />
                   </div>
-
 
                   <div
                     className={`absolute z-0 border border-[#E39CD1] bg-transparent p-3 rounded-xl btn-shadow -top-44 left-0 -translate-x-5 w-max transition-all duration-300 ease-in-out ${
