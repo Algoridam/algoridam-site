@@ -73,7 +73,7 @@ const Process = () => {
               <p className="text-2xl font-medium">
                 {translations.processes.process1.name}
               </p>
-              <p className="opacity-70 mt-4 text-sm lg:text-base">
+              <p className="opacity-70 mt-4">
                 {translations.processes.process1.description}
               </p>
             </div>
@@ -85,7 +85,7 @@ const Process = () => {
               <p className="text-2xl font-medium">
                 {translations.processes.process2.name}
               </p>
-              <p className="opacity-70 mt-4 text-sm lg:text-base">
+              <p className="opacity-70 mt-4">
                 {translations.processes.process2.description}
               </p>
             </div>
@@ -97,7 +97,7 @@ const Process = () => {
               <p className="text-2xl font-medium">
                 {translations.processes.process3.name}
               </p>
-              <p className="opacity-70 mt-4 text-sm lg:text-base">
+              <p className="opacity-70 mt-4">
                 {translations.processes.process3.description}
               </p>
             </div>
