@@ -1,75 +1,109 @@
-'use client'
-import React, { useState, useRef, MouseEvent } from 'react';
+'use client';
+
+import React, { useEffect, useRef, useState } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import useLanguageStore from '@/zeustand/languageStore';
+import Image from 'next/image';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Process = () => {
-  const processes = [
-    {
-      name: 'Project Request',
-      description: 'Our collaboration begins with your project request, which provides clarity on your needs and allows me to assess our compatibility. If aligned, we will arrange a video call to explore further details.'
-    },
-    {
-      name: 'First Meeting',
-      description: 'Building trust is paramount in our collaboration. During our first meeting, we focus on getting acquainted to determine compatibility, discuss your goals and requirements, address any queries, and outline the subsequent steps forward.'
-    },
-    {
-      name: 'First Meeting',
-      description: 'Building trust is paramount in our collaboration. During our first meeting, we focus on getting acquainted to determine compatibility, discuss your goals and requirements, address any queries, and outline the subsequent steps forward.'
+  const { translations } = useLanguageStore();
+  const processesContainerRef = useRef<HTMLDivElement>(null);
+  const processesWrapperRef = useRef<HTMLDivElement>(null);
+  const [windowWidth, setWindowWidth] = useState<number>(0);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth);
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
     }
-  ];
+  }, []);
 
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  const sliderRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+    const processes = gsap.utils.toArray('.process');
+    const isLaptopOrLarger = windowWidth >= 1024;
+    const xPercent = isLaptopOrLarger ? -50 : -110 * (processes.length - 1);
 
-  const handleMouseDown = (e: MouseEvent<HTMLDivElement>) => {
-    if (sliderRef.current) {
-      setIsDragging(true);
-      setStartX(e.pageX - sliderRef.current.offsetLeft);
-      setScrollLeft(sliderRef.current.scrollLeft);
-    }
-  };
+    gsap.to(processesWrapperRef.current, {
+      xPercent: xPercent,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: processesContainerRef.current,
+        pin: true,
+        scrub: 1,
+        start: 'top top',
+        end: '+=600',
+      }});
+    }, processesContainerRef);
 
-  const handleMouseLeave = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
-    if (!isDragging || !sliderRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - sliderRef.current.offsetLeft;
-    const walk = (x - startX) * 2; // Scroll speed
-    sliderRef.current.scrollLeft = scrollLeft - walk;
-  };
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <section className='flex flex-col items-center pb-[180px]'>
-      <h1 className='text-6xl font-medium text-center'>Our Process</h1>
-      <p className='mt-4 text-center tracking-wide opacity-70'>We specialize in creating custom software solutions that empower <br /> businesses to achieve their unique goals.</p>
-      <div 
-        className='mt-16 pl-32 pr-4 flex gap-4 overflow-auto w-full mx-auto cursor-grab pb-5'
-        ref={sliderRef}
-        onMouseDown={handleMouseDown}
-        onMouseLeave={handleMouseLeave}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}
-        style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
-      >
-        {
-          processes.map((process, index) => (
-            <div key={index} className='flex items-center gap-10 bg-white bg-opacity-5 border border-white border-opacity-20 p-9 rounded-[48px] min-w-[540px] select-none'>
-              <p className='text-[144px] font-medium'>{index + 1}</p>
-              <div>
-                <p className='text-2xl font-medium'>{process.name}</p>
-                <p className='opacity-70 mt-4'>{process.description}</p>
-              </div>
+    <section
+      ref={processesContainerRef}
+      className="relative flex flex-col items-center pt-32 h-screen w-full mx-auto"
+    >
+      <Image className='absolute top-0 left-1/2 z-0 w-[213px] h-[213px] opacity-50 floating-5' src="/bubble5.svg" alt="Vercel Logo" width={550} height={50} layout="intrinsic" />
+
+      <h1 className="text-[40px] md:text-6xl font-medium text-center leading-snug">
+        {translations.processes.heading}
+      </h1>
+      <p className="mt-4 text-center tracking-wide">
+        {translations.processes.intro}
+      </p>
+
+      <div className="w-full overflow-x-hidden mt-16">
+        <div
+          ref={processesWrapperRef}
+          className="flex gap-10 h-full w-[90%] mx-auto" 
+        >
+          <div className="process flex-shrink-0 h-[280px] flex items-center justify-center gap-10 backdrop-blur-[292px] border border-white border-opacity-20 p-10 rounded-[40px] text-xl w-full max-w-[600px]">
+            <p className="text-[68px] md:text-[144px] font-medium">1.</p>
+            <div>
+              <p className="text-2xl font-medium mt-4">
+                {translations.processes.process1.name}
+              </p>
+              <p className="opacity-70 mt-4">
+                {translations.processes.process1.description}
+              </p>
             </div>
-          ))
-        }
+          </div>
+
+          <div className="process flex-shrink-0 h-[280px] flex items-center justify-center gap-10 backdrop-blur-[292px] border border-white border-opacity-20 p-10 rounded-[40px] text-xl w-full max-w-[600px]">
+            <p className="text-[68px] md:text-[144px] font-medium">2.</p>
+            <div>
+              <p className="text-2xl font-medium mt-4">
+                {translations.processes.process2.name}
+              </p>
+              <p className="opacity-70 mt-4">
+                {translations.processes.process2.description}
+              </p>
+            </div>
+          </div>
+
+          <div className="process flex-shrink-0 h-[280px] flex items-center justify-center gap-10 backdrop-blur-[292px] border border-white border-opacity-20 p-10 rounded-[40px] text-xl w-full max-w-[600px]">
+            <p className="text-[68px] md:text-[144px] font-medium">3.</p>
+            <div>
+              <p className="text-2xl font-medium mt-4">
+                {translations.processes.process3.name}
+              </p>
+              <p className="opacity-70 mt-4">
+                {translations.processes.process3.description}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -1,26 +1,16 @@
+'use client'
+
 import React, {FC} from 'react'
 import Image from 'next/image'
+import useLanguageStore from '@/zeustand/languageStore'
 
 type props = {
   isServicesPage?: boolean
 }
 
 const Services: FC<props> = ({isServicesPage}) => {
-  const services = [
-    {
-      name: 'Design',
-      description: 'We specialize in creating custom software solutions that empower businesses to achieve their unique goals'
-    },
-    {
-      name: 'Developement',
-      description: 'We specialize in delivering robust, scalable, and high-performance software solutions, meticulously developed to meet your unique business needs.'
-    },
-    {
-      name: 'Management',
-      description: 'Our comprehensive software management ensures seamless operation, continuous improvement, and proactive maintenance, keeping your systems running at peak efficiency.'
-    },
-  ];
-  
+  const { translations } = useLanguageStore();
+
   return (
     <section className='z-20'>
       {
@@ -63,11 +53,11 @@ const Services: FC<props> = ({isServicesPage}) => {
       }
 
         <div className='flex flex-col items-center pt-[100px] w-[90%] mx-auto max-w-[1440px]'>
-          <h1 className='text-[40px] md:text-6xl font-medium text-center leading-snug'>Van idee tot realisatie</h1>
-          <p className='mt-4 text-center tracking-wide opacity-70'>Transforming bold ideas into tangible results takes vision and determination. By <br /> turning ambitious dreams into reality, we achieve significant and lasting impact.</p>
+          <h1 className='text-[40px] md:text-6xl font-medium text-center leading-snug'>{translations.services.heading}</h1>
+          <p className='mt-4 text-center tracking-wide opacity-70'>{translations.services.intro}</p>
           <div className='mt-16 grid grid-cols-1 lg:grid-cols-3 gap-4 md:w-3/4 mx-auto'>
             {
-              services.map((service, index) => (
+              translations.services.services.map((service: {name: string; description: string}, index: number) => (
                 <div key={index} className='bg-white bg-opacity-5 border border-white border-opacity-20 p-8 rounded-3xl'>
                   <div className='p-2 rounded-full border border-white border-opacity-20 mb-8 w-max'>
                     <Image src="/arrow-up-right.svg" alt="arrow" width={28} height={28} layout="intrinsic" />

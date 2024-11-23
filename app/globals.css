@@ -30,16 +30,25 @@ p {
   @apply font-light;
 }
 
+* {
+  @apply whitespace-pre-wrap break-words;
+}
+
 br {
   @apply hidden md:block
 }
 
-/* styles.css */
 .hero-background {
-  background:
-  /* url('/Ellipse.png'), */
-  radial-gradient(58.28% 63.7% at 50% 40.11%, #4A054F 0%, #350658 66.43%, #1E0551 98.5%);
-  /* background-position: 0 200px 0 1000px; */
+  position: relative;
+  overflow: hidden;
+  min-height: 100dvh;
+  height: 100dvh;
+  background: radial-gradient(58.28% 63.7% at 50% 40.11%, #4A054F 0%, #350658 66.43%, #1E0551 98.5%);
+}
+
+.mobileMenu-bg {
+  background: radial-gradient(58.28% 63.7% at 50% 40.11%, #4A054F 0%, #350658 66.43%, #1E0551 98.5%),
+  linear-gradient(183.26deg, #1E0551 -17.82%, #350658 20.84%, #4A054F 100.91%);
 }
 
 .case-study-background {
@@ -69,74 +78,72 @@ br {
   }
 }
 
+.floating-1 {
+  animation: float1 30s ease-in-out infinite;
+}
+
+.floating-2 {
+  animation: float2 55s ease-in-out infinite;
+}
+
+.floating-3 {
+  animation: float3 40s ease-in-out infinite;
+}
+
+.floating-4 {
+  animation: float4 35s ease-in-out infinite;
+}
+
+.floating-5 {
+  animation: float5 40s ease-in-out infinite;
+}
+
 @keyframes float1 {
   0% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(20vw, -30vh);
-  }
-  50% {
-    transform: translate(-10vw, 20vh);
-  }
-  75% {
-    transform: translate(15vw, -10vh);
+    transform: translate(0, 100vh);
   }
   100% {
-    transform: translate(0, 0);
+    transform: translate(10vw, -90vh);
   }
 }
 
 @keyframes float2 {
   0% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(-15vw, 25vh);
-  }
-  50% {
-    transform: translate(25vw, -20vh);
-  }
-  75% {
-    transform: translate(-20vw, 15vh);
+    transform: translate(0, 100vh);
   }
   100% {
-    transform: translate(0, 0);
+    transform: translate(-15vw, -90vh);
   }
 }
 
 @keyframes float3 {
   0% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(30vw, 10vh);
-  }
-  50% {
-    transform: translate(-20vw, -25vh);
-  }
-  75% {
-    transform: translate(10vw, 20vh);
+    transform: translate(0, 100vh);
   }
   100% {
-    transform: translate(0, 0);
+    transform: translate(20vw, -90vh);
   }
 }
 
-.floating-1 {
-  animation: float1 25s ease-in-out infinite alternate;
+@keyframes float4 {
+  0% {
+    transform: translate(0, 100vh);
+  }
+  100% {
+    transform: translate(-5vw, -90vh);
+  }
 }
 
-.floating-2 {
-  animation: float2 30s ease-in-out infinite alternate;
-}
-
-.floating-3 {
-  animation: float3 35s ease-in-out infinite alternate;
+@keyframes float5 {
+  0% {
+    transform: translate(0, 100vh);
+  }
+  100% {
+    transform: translate(30vw, -90vh);
+  }
 }
 
 .glowing-oval {
-  /* @apply absolute z-10 w-full h-[783px] bg-[#090009] rounded-[50%]; */
   @apply absolute z-10 w-full h-[500px] md:h-[783px] bg-[#090009] rounded-[50%];
 
   background: radial-gradient(59.33% 49.94% at 50% 50.06%, #0C0222 80%, #E750B7 100%);
