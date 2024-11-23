@@ -36,13 +36,15 @@ const SiteHeader = ({ contactRef }: { contactRef: React.RefObject<HTMLElement> }
 
   useEffect(() => {
     if (showMobileMenu) {
-      document.body.style.overflow = 'hidden';
       document.body.style.overflowX = 'hidden';
+      document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
+      document.body.style.overflowX = 'hidden';
     }
     
     return () => {
+      document.body.style.overflowX = 'hidden';
       document.body.style.overflow = 'auto';
     };
   }, [showMobileMenu]);
