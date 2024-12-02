@@ -13,6 +13,7 @@ const Process = () => {
   const processesContainerRef = useRef<HTMLDivElement>(null);
   const processesWrapperRef = useRef<HTMLDivElement>(null);
   const [windowWidth, setWindowWidth] = useState<number>(0);
+  const [animationsEnabled, setAnimationsEnabled] = useState<boolean>(false);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -29,24 +30,28 @@ const Process = () => {
   }, []);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-    const processes = gsap.utils.toArray('.process');
-    const xPercent = windowWidth >= 1024 ? -50 : -100 * (processes.length - 1);
+    if (animationsEnabled) {
+      const ctx = gsap.context(() => {
+        const processes = gsap.utils.toArray('.process');
+        const xPercent = windowWidth >= 1024 ? -50 : -100 * (processes.length - 1);
 
-    gsap.to(processesWrapperRef.current, {
-      xPercent: xPercent,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: processesContainerRef.current,
-        pin: true,
-        scrub: 1,
-        start: 'top top',
-        end: '+=600',
-      }});
-    }, processesContainerRef);
+        gsap.to(processesWrapperRef.current, {
+          xPercent: xPercent,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: processesContainerRef.current,
+            pin: true,
+            scrub: 1,
+            start: 'top top',
+            end: '+=600',
+          }});
+      }, processesContainerRef);
 
-    return () => ctx.revert();
-  }, [windowWidth]);
+      return () => ctx.revert();
+    } else {
+      return () => {};
+    }
+  }, [windowWidth, animationsEnabled]);
 
   return (
     <section
@@ -62,12 +67,12 @@ const Process = () => {
         {translations.processes.intro}
       </p>
 
-      <div className="w-full overflow-hidden mt-16">
+      <div className="w-full overflow-x-auto mt-16 cursor-grab">
         <div
           ref={processesWrapperRef}
           className="flex gap-10 h-full w-[90%] mx-auto" 
         >
-          <div className="process flex-shrink-0 h-max lg:h-[280px] flex items-center justify-center gap-10 backdrop-blur-[292px] border border-white border-opacity-20 p-10 rounded-[40px] text-xl w-full max-w-[600px]">
+          <div className="process flex-shrink-0 h-max lg:h-[280px] flex items-center justify-center gap-10 backdrop-blur-[292px] border border-white border-opacity-20 p-10 rounded-[40px] text-xl w-full max-w-[600px] overflow-x-auto">
             <p className="text-[68px] md:text-[144px] font-medium">1.</p>
             <div>
               <p className="text-2xl font-medium">

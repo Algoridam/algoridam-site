@@ -3,6 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import useLanguageStore from '@/zeustand/languageStore'
+import Link from 'next/link';
 
 const CaseStudies = () => {
   const { translations } = useLanguageStore();
@@ -31,7 +32,9 @@ const CaseStudies = () => {
             ))
           }
         </div>
-        <button className="bg-[#0C0222] border-[1.5px] border-[#E39CD1] border-opacity-50 py-5 px-14 rounded-full mt-14">{translations.caseStudies.seeAllCasesButton}</button>
+        <Link href='/work'>
+          <button className="bg-[#0C0222] border-[1.5px] border-[#E39CD1] border-opacity-50 py-5 px-14 rounded-full mt-14">{translations.caseStudies.seeAllCasesButton}</button>
+        </Link>
     </section>
   )
 }

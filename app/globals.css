@@ -16,6 +16,10 @@
   }
 }
 
+* {
+  color: white;
+}
+
 body {
   overflow-x: hidden !important;
   color: rgb(var(--foreground-rgb));
