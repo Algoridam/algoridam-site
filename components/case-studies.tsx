@@ -19,7 +19,7 @@ const CaseStudies = () => {
         {
           translations.caseStudies.studies.map((study: {name: string; description: string}, index: number) => (
             <div key={index} className='bg-white bg-opacity-5 border border-white border-opacity-20 p-8 rounded-[48px] z-10 max-h-[500px]'>
-              <Image src="/sample-image.png" alt="arrow" className='hidden md:block w-full h-full rounded-3xl mb-8 object-contain' width={100} height={200} layout="intrinsic" />
+              <Image src="/sample-image.png" alt="arrow" className='hidden md:block w-full h-[265px] rounded-3xl mb-8 object-contain' width={100} height={200} layout="intrinsic" />
               <Image src="/sample-image.png" alt="arrow" className='block md:hidden w-full h-[315px] rounded-3xl mb-8 object-cover' width={100} height={315} />
               <div className='flex items-center justify-between w-full'>
                 <p className='text-2xl font-medium'>{study.name}</p>
