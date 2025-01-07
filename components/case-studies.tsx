@@ -15,10 +15,10 @@ const CaseStudies = () => {
 
       <h1 className='text-[40px] md:text-6xl font-medium text-center leading-snug'>{translations.caseStudies.heading}</h1>
       <p className='mt-4 text-center tracking-wide opacity-70'>{translations.caseStudies.intro}</p>
-      <div className='mt-16 grid grid-cols-1 lg:grid-cols-2 gap-14 md:w-3/4 mx-auto max-h-[500px]'>
+      <div className='mt-16 grid grid-cols-1 lg:grid-cols-2 gap-14 md:w-3/4 mx-auto'>
         {
           translations.caseStudies.studies.map((study: {name: string; description: string}, index: number) => (
-            <div key={index} className='bg-white bg-opacity-5 border border-white border-opacity-20 p-8 rounded-[48px] z-10'>
+            <div key={index} className='bg-white bg-opacity-5 border border-white border-opacity-20 p-8 rounded-[48px] z-10 max-h-[500px]'>
               <Image src="/sample-image.png" alt="arrow" className='hidden md:block w-full h-full rounded-3xl mb-8 object-contain' width={100} height={200} layout="intrinsic" />
               <Image src="/sample-image.png" alt="arrow" className='block md:hidden w-full h-[315px] rounded-3xl mb-8 object-cover' width={100} height={315} />
               <div className='flex items-center justify-between w-full'>
