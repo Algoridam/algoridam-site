@@ -20,7 +20,7 @@ const Contact = forwardRef<HTMLElement, {}>((props, ref) => {
   };
 
   return (
-    <section className='flex flex-col items-center mb-20 w-[90%] mx-auto max-w-[1440px]'>
+    <section className='flex flex-col items-center mb-20 w-[90%] mx-auto max-w-[1440px] overflow-x-hidden'>
       <h1 className='text-[40px] md:text-6xl leading-snug font-medium text-center'>
         {translations.contact.heading}
       </h1>

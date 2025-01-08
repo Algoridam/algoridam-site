@@ -54,7 +54,7 @@ const Testimonials = () => {
 
   return (
     <section
-      className='relative flex flex-col items-center h-screen pt-20 mb-[200px] w-[90%] mx-auto max-w-[1440px]'
+      className='relative flex flex-col items-center h-screen pt-20 mb-[200px] w-[90%] mx-auto max-w-[1440px] overflow-hidden'
       ref={testimonialsContainerRef}
     >
       <Image className='absolute left-1/4 top-20 z-0 size-[140px] md:size-[200px] opacity-50 floating-4' src="/bubble2.svg" alt="Bubble 4" width={550} height={50} layout="intrinsic" />

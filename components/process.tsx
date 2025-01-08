@@ -55,17 +55,8 @@ const Process = () => {
   return (
     <section
       ref={processesContainerRef}
-      className="relative flex flex-col items-center pt-32 md:h-screen w-full mx-auto mb-[200px] md:mb-0"
+      className="relative flex flex-col items-center pt-32 md:h-screen w-full mx-auto mb-[200px] md:mb-0 overflow-x-hidden md:overflow-auto"
     >
-      <Image
-        className="absolute top-0 left-1/2 z-0 w-[213px] h-[213px] opacity-50 floating-5"
-        src="/bubble5.svg"
-        alt="Vercel Logo"
-        width={550}
-        height={50}
-        layout="intrinsic"
-      />
-
       <h1 className="text-[40px] md:text-6xl font-medium text-center leading-snug">
         {translations.processes.heading}
       </h1>
