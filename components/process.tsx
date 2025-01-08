@@ -17,6 +17,7 @@ const Process = () => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setWindowWidth(window.innerWidth);
+
       const handleResize = () => {
         setWindowWidth(window.innerWidth);
       };
@@ -29,31 +30,41 @@ const Process = () => {
   }, []);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-    const processes = gsap.utils.toArray('.process');
-    const xPercent = windowWidth >= 1024 ? -50 : -100 * (processes.length - 1);
+    if (windowWidth >= 768) {
+      const ctx = gsap.context(() => {
+        const processes = gsap.utils.toArray('.process');
+        const xPercent = windowWidth >= 1024 ? -50 : -100 * (processes.length - 1);
 
-    gsap.to(processesWrapperRef.current, {
-      xPercent: xPercent,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: processesContainerRef.current,
-        pin: true,
-        scrub: 1,
-        start: 'top top',
-        end: '+=600',
-      }});
-    }, processesContainerRef);
+        gsap.to(processesWrapperRef.current, {
+          xPercent: xPercent,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: processesContainerRef.current,
+            pin: true,
+            scrub: 1,
+            start: 'top top',
+            end: '+=600',
+          },
+        });
+      }, processesContainerRef);
 
-    return () => ctx.revert();
+      return () => ctx.revert();
+    }
   }, [windowWidth]);
 
   return (
     <section
       ref={processesContainerRef}
-      className="relative flex flex-col items-center pt-32 h-screen w-full mx-auto"
+      className="relative flex flex-col items-center pt-32 md:h-screen w-full mx-auto mb-[200px] md:mb-0"
     >
-      <Image className='absolute top-0 left-1/2 z-0 w-[213px] h-[213px] opacity-50 floating-5' src="/bubble5.svg" alt="Vercel Logo" width={550} height={50} layout="intrinsic" />
+      <Image
+        className="absolute top-0 left-1/2 z-0 w-[213px] h-[213px] opacity-50 floating-5"
+        src="/bubble5.svg"
+        alt="Vercel Logo"
+        width={550}
+        height={50}
+        layout="intrinsic"
+      />
 
       <h1 className="text-[40px] md:text-6xl font-medium text-center leading-snug">
         {translations.processes.heading}
@@ -62,10 +73,10 @@ const Process = () => {
         {translations.processes.intro}
       </p>
 
-      <div className="w-full overflow-hidden mt-16">
+      <div className="w-full md:overflow-hidden mt-10 md:mt-16">
         <div
           ref={processesWrapperRef}
-          className="flex gap-10 h-full w-[90%] mx-auto" 
+          className="flex flex-col md:flex-row gap-8 md:gap-10 h-full w-[90%] mx-auto"
         >
           <div className="process flex-shrink-0 h-max lg:h-[280px] flex items-center justify-center gap-10 backdrop-blur-[292px] border border-white border-opacity-20 p-10 rounded-[40px] text-xl w-full max-w-[600px]">
             <p className="text-[68px] md:text-[144px] font-medium">1.</p>
