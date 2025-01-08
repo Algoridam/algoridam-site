@@ -6,6 +6,10 @@ import LanguageWrapper from '@/components/LanguageWrapper';
 export const metadata: Metadata = {
   title: 'Algoridam',
   description: '',
+  icons: {
+    icon: '/favicon.svg',
+    apple: '/favicon.png',
+  }
 };
 
 export default function RootLayout({
