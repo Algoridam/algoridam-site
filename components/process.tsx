@@ -78,8 +78,8 @@ const Process = () => {
           ref={processesWrapperRef}
           className="flex flex-col md:flex-row gap-8 md:gap-10 h-full w-[90%] mx-auto"
         >
-          <div className="process flex-shrink-0 h-max lg:h-[280px] flex items-center justify-center gap-10 backdrop-blur-[292px] border border-white border-opacity-20 p-10 rounded-[40px] text-xl w-full max-w-[600px]">
-            <p className="text-[68px] md:text-[144px] font-medium">1.</p>
+          <div className="process flex-shrink-0 h-max md:h-[280px] flex flex-col md:flex-row md:items-center justify-center gap-6 md:gap-10 backdrop-blur-[292px] border border-white border-opacity-20 p-10 rounded-[40px] text-xl w-full max-w-[600px]">
+          <p className="text-[68px] leading-[50px] md:text-[144px] font-medium">1.</p>
             <div>
               <p className="text-2xl font-medium">
                 {translations.processes.process1.name}
@@ -90,8 +90,8 @@ const Process = () => {
             </div>
           </div>
 
-          <div className="process flex-shrink-0 h-max lg:h-[280px] flex items-center justify-center gap-10 backdrop-blur-[292px] border border-white border-opacity-20 p-10 rounded-[40px] text-xl w-full max-w-[600px]">
-            <p className="text-[68px] md:text-[144px] font-medium">2.</p>
+          <div className="process flex-shrink-0 h-max md:h-[280px] flex flex-col md:flex-row md:items-center justify-center gap-6 md:gap-10 backdrop-blur-[292px] border border-white border-opacity-20 p-10 rounded-[40px] text-xl w-full max-w-[600px]">
+            <p className="text-[68px] leading-[50px] md:text-[144px] font-medium">2.</p>
             <div>
               <p className="text-2xl font-medium">
                 {translations.processes.process2.name}
@@ -102,8 +102,8 @@ const Process = () => {
             </div>
           </div>
 
-          <div className="process flex-shrink-0 h-max lg:h-[280px] flex items-center justify-center gap-10 backdrop-blur-[292px] border border-white border-opacity-20 p-10 rounded-[40px] text-xl w-full max-w-[600px]">
-            <p className="text-[68px] md:text-[144px] font-medium">3.</p>
+          <div className="process flex-shrink-0 h-max md:h-[280px] flex flex-col md:flex-row md:items-center justify-center gap-6 md:gap-10 backdrop-blur-[292px] border border-white border-opacity-20 p-10 rounded-[40px] text-xl w-full max-w-[600px]">
+          <p className="text-[68px] leading-[50px] md:text-[144px] font-medium">3.</p>
             <div>
               <p className="text-2xl font-medium">
                 {translations.processes.process3.name}
