@@ -24,8 +24,6 @@ const SiteHeader = ({ contactRef }: { contactRef: React.RefObject<HTMLElement> }
   };
 
   const scrollToContact = () => {
-    console.log('ds')
-    console.log(contactRef)
     if (contactRef.current) {
       contactRef.current.scrollIntoView({
         behavior: 'smooth',
@@ -54,7 +52,7 @@ const SiteHeader = ({ contactRef }: { contactRef: React.RefObject<HTMLElement> }
       <div className={`absolute left-0 top-0 z-[41] ${showLang && !showMobileMenu ? 'w-screen h-screen' : 'w-0 h-0'}`} onClick={() => setShowLang(false)}></div>
 
       <nav className="flex lg:grid grid-cols-3 items-center justify-between w-full">
-        <ul className='hidden lg:flex gap-7 place-self-start'>
+        <ul className='hidden lg:flex gap-7'>
           <li><Link className='linkEffect linkEffect--rightToLeft' href='/'>Home</Link></li>
           <li><Link className='linkEffect linkEffect--rightToLeft' href='/about'>{translations.aboutUs}</Link></li>
           <li><Link className='linkEffect linkEffect--rightToLeft' href='/work'>{translations.ourWork}</Link></li>

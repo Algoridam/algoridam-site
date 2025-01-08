@@ -9,11 +9,11 @@ const CaseStudies = () => {
   const { translations } = useLanguageStore();
 
   return (
-    <section className='flex flex-col items-center relative overflow-x-hidden'>
+    <section className='flex flex-col items-center relative h-max overflow-hidden'>
       <Image className='absolute top-1/2 left-1/4 z-0 w-[400px] max-h-[400px] opacity-50 floating-4' src="/bubble1.svg" alt="Vercel Logo" width={550} height={50} layout="intrinsic" />
       <Image className='absolute top-1/4 left-1/2 z-0 w-[213px] max-h-[213px] opacity-50 floating-1' src="/bubble3.svg" alt="Vercel Logo" width={550} height={50} layout="intrinsic" />
 
-      <div className='w-[90%] mx-auto max-w-[1440px]'>
+      <div className='w-[90%] flex flex-col items-center mx-auto max-w-[1440px]'>
         <h1 className='text-[40px] md:text-6xl font-medium text-center leading-snug'>{translations.caseStudies.heading}</h1>
         <p className='mt-4 text-center tracking-wide opacity-70'>{translations.caseStudies.intro}</p>
         <div className='mt-16 grid grid-cols-1 lg:grid-cols-2 gap-14 md:w-3/4 mx-auto'>
@@ -34,7 +34,7 @@ const CaseStudies = () => {
           }
         </div>
         <Link href='/work'>
-          <button className="bg-[#0C0222] border-[1.5px] border-[#E39CD1] border-opacity-50 py-5 px-14 rounded-full mt-14">{translations.caseStudies.seeAllCasesButton}</button>
+          <button className="bg-[#330658] sticky z-10 border-[1.5px] border-[#E39CD1] border-opacity-50 py-5 px-14 rounded-full mt-14 hover:btn-shadow">{translations.caseStudies.seeAllCasesButton}</button>
         </Link>
       </div>
     </section>

@@ -18,6 +18,7 @@ const AboutPage = () => {
   const contactRef = useRef<HTMLElement>(null);
 
   const handleMouseDown = (e: MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
     if (sliderRef.current) {
       setIsDragging(true);
       setStartX(e.pageX - sliderRef.current.offsetLeft);
@@ -37,7 +38,7 @@ const AboutPage = () => {
     if (!isDragging || !sliderRef.current) return;
     e.preventDefault();
     const x = e.pageX - sliderRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
+    const walk = (x - startX) * 1.5; // Adjust multiplier for speed
     sliderRef.current.scrollLeft = scrollLeft - walk;
   };
 
@@ -88,12 +89,12 @@ const AboutPage = () => {
       </section>
 
       <section className='py-[200px] case-study-background'>
-        <div className='w-[90%] max-w-7xl mx-auto'>
+        <div className='w-[95%] ml-[5%]'>
           <div className='md:flex justify-between'>
             <h1 className='text-[40px] md:text-6xl leading-snug font-medium text-center md:text-left'>
               {translations.about.discoverOurTeam}
             </h1>
-            <div className='hidden md:flex items-center gap-5'>
+            <div className='hidden md:flex items-center gap-5 mr-[5%]'>
               <div className='p-2 rounded-full border border-white border-opacity-20 mb-8 w-max cursor-pointer select-none hover:bg-white hover:bg-opacity-5 transition-all' onClick={onscrollLeft}>
                 <Image src="/arrow-left.svg" alt="arrow" width={28} height={28} layout="intrinsic" />
               </div>
@@ -103,7 +104,7 @@ const AboutPage = () => {
             </div>
           </div>
           <div
-            className='mt-11 md:mt-16 md:pl-20 md:pr-4 flex flex-col md:flex-row gap-10 overflow-auto w-full mx-auto cursor-grab pb-5'
+            className='hidden-scrollbar mt-11 md:mt-16 md:pr-4 flex flex-col md:flex-row gap-10 overflow-auto w-full mx-auto cursor-grab pb-5'
             ref={sliderRef}
             onMouseDown={handleMouseDown}
             onMouseLeave={handleMouseLeave}

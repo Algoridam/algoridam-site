@@ -18,7 +18,7 @@ const HeroSection = () => {
         <div className='flex flex-col items-center pb-20'>
           <h1 className='z-10 text-center text-5xl lg:text-8xl mt-24 mb-4 font-medium'>{translations.hero.heading}</h1>
           <p className='z-10 text-center mb-4 opacity-70 font-light'>{translations.hero.description}</p>
-          <button className='z-10 border border-[#E39CD1] bg-[#330658] py-4 px-7 lg:text-lg rounded-full mt-8 btn-shadow'>
+          <button className='z-10 border border-[#E39CD1] bg-[#330658] py-4 px-7 lg:text-lg rounded-full mt-8 hover:btn-shadow'>
             {translations.hero.buttonText}
           </button>
         </div>

@@ -191,7 +191,7 @@ br {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 99%;
   height: 2px;
   background-color: white;
   transform: translateX(-100%);
@@ -200,4 +200,13 @@ br {
 
 .linkEffect--rightToLeft:hover::after {
   transform: translateX(0);
+}
+
+.hidden-scrollbar {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer 10+ */
+}
+
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
 }
