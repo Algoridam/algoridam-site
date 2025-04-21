@@ -1,29 +1,24 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import SiteHeader from "@/components/header";
-
-const inter = Inter({ subsets: ["latin"] });
+import type { Metadata } from 'next';
+import './globals.css';
+import LanguageWrapper from '@/components/LanguageWrapper';
 
 export const metadata: Metadata = {
-  title: "Algoridam",
-  description: "",
+  title: 'Algoridam',
+  description: '',
+  icons: {
+    icon: '/favicon.svg',
+    apple: '/favicon.png',
+  }
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/algoridam-favicon.svg" />
-      </head>
-      <body className="bg-gradient-custom from-custom-start to-custom-endbg-gradient-custom to-custom-end">
-        <SiteHeader/>
-        {children}
-        </body>
-    </html>
+    <LanguageWrapper>
+      {children}
+    </LanguageWrapper>
   );
 }

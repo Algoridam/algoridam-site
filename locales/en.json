@@ -1,0 +1,116 @@
+{
+  "home": "Home",
+  "aboutUs": "About us",
+  "ourWork": "Our work",
+  "servicesLink": "Services",
+  "letsTalk": "Let's talk",
+  "hero": {
+    "heading": "Design & Build \n Software Solutions.",
+    "description": "We specialize in creating custom software solutions that empower \n businesses to achieve their unique goals.",
+    "buttonText": "Start a project"
+  },
+  "about": {
+    "meetOurTeam": "Meet \n Our Small Team",
+    "teamDescription": "Transforming bold ideas into tangible results takes vision and determination. By turning ambitious dreams  into reality, we achieve significant and lasting impact. Transforming bold ideas into tangible results takes  vision and determination. By turning ambitious dreams into reality, we achieve significant and lasting impact. Transforming bold ideas into tangible results takes vision and determination. By turning ambitious dreams into reality, we achieve significant and lasting impact.",
+    "whyAlgoridam": "Why Algoridam",
+    "discoverOurTeam": "Discover our team",
+    "services": [
+      "Human-Centered Innovation",
+      "SaaS Expert Only",
+      "Partner for Success"
+    ],
+    "team": [
+      { "name": "Maishanu Ahidjo", "role": "CEO" },
+      { "name": "Jane Doe", "role": "CTO" },
+      { "name": "John Smith", "role": "Developer" }
+    ]
+  },
+  "services": {
+    "heading": "From idea to realization",
+    "intro": "Transforming bold ideas into tangible results takes vision and determination. \n By turning ambitious dreams into reality, we achieve significant and lasting impact.",
+    "services": [
+      {
+        "name": "Design",
+        "description": "We specialize in creating custom software solutions that empower businesses to achieve their unique goals."
+      },
+      {
+        "name": "Development",
+        "description": "We specialize in delivering robust, scalable, and high-performance software solutions, meticulously developed to meet your unique business needs."
+      },
+      {
+        "name": "Management",
+        "description": "Our comprehensive software management ensures seamless operation, continuous improvement, and proactive maintenance, keeping your systems running at peak efficiency."
+      }
+    ]
+  },
+  "caseStudies": {
+    "studies": [
+      {
+        "name": "Platr",
+        "description": "We specialize in creating custom software solutions that empower businesses to achieve their unique goals."
+      },
+      {
+        "name": "Platr",
+        "description": "We specialize in creating custom software solutions that empower businesses to achieve their unique goals."
+      },
+      {
+        "name": "Platr",
+        "description": "We specialize in creating custom software solutions that empower businesses to achieve their unique goals."
+      },
+      {
+        "name": "Platr",
+        "description": "We specialize in creating custom software solutions that empower businesses to achieve their unique goals."
+      }
+    ],
+    "heading": "Explore \n Our Case Studies",
+    "intro": "Discover our case studies to delve into real-world examples of our work. \n Gain insights and inspiration from our documented successes.",
+    "seeAllCasesButton": "See all cases"
+  },
+  "processes": {
+    "heading": "Our Process",
+    "intro": "We specialize in creating custom software solutions that empower businesses to achieve their unique goals.",
+    "process1": {
+      "name": "Project Request",
+      "description": "Our collaboration begins with your project request, providing clarity on your needs and allowing us to assess compatibility. If aligned, we arrange a video call."
+    },
+    "process2": {
+      "name": "First Meeting",
+      "description": "Building trust is key. In our first meeting, we get acquainted, discuss goals and requirements, address any queries, and outline next steps."
+    },
+    "process3": {
+      "name": "Planning & Execution",
+      "description": "We define project milestones, timelines, and expectations to ensure a seamless process from start to finish."
+    }
+  },
+  "testimonials": {
+    "heading": "What customers say about us",
+    "intro": "Discover why they chose Algoridam and how our software has changed their lives.",
+    "testimonial1": {
+      "quote": "Working with Algoridam has been a game-changer for our business.",
+      "name": "John Smith",
+      "position": "CEO of Tech Innovators Inc."
+    },
+    "testimonial2": {
+      "quote": "Algoridam provided the best custom software solution we've seen.",
+      "name": "Sarah Lee",
+      "position": "Founder of Creative Solutions"
+    },
+    "testimonial3": {
+      "quote": "The level of professionalism and expertise at Algoridam was outstanding.",
+      "name": "Alex Brown",
+      "position": "Director at Innovations Lab"
+    }
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "intro": "We are happy to help you explore all the possibilities. \n Feel free to contact us by phone for a direct discussion about your needs.",
+    "description": "We’re excited to hear from you and discuss how we can assist with your project or answer any questions you may have.",
+    "fullNamePlaceholder": "Full Name",
+    "emailPlaceholder": "Email",
+    "messagePlaceholder": "Message",
+    "buttonText": "Start a project"
+  },
+  "footer": {
+    "copyRight":  "All rights reserved"
+  }
+}

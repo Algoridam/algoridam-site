@@ -1,0 +1,116 @@
+{
+  "greeting": "Hallo",
+  "aboutUs": "Over ons",
+  "ourWork": "Ons werk",
+  "servicesLink": "Diensten",
+  "letsTalk": "Laten we praten",
+  "hero": {
+    "heading": "Ontwerpen & Bouwen \n Softwareoplossingen.",
+    "description": "Wij zijn gespecialiseerd in het creëren van aangepaste \n softwareoplossingen die bedrijven in staat stellen hun unieke doelen te bereiken.",
+    "buttonText": "Begin een project"
+  },
+  "about": {
+    "meetOurTeam": "Ontmoet ons kleine team",
+    "teamDescription": "Het transformeren van gedurfde ideeën in tastbare resultaten vereist visie en vastberadenheid. Door ambitieuze dromen werkelijkheid te maken, bereiken we een significante en blijvende impact. Het transformeren van gedurfde ideeën in tastbare resultaten vereist visie en vastberadenheid. Door ambitieuze dromen werkelijkheid te maken, bereiken we een significante en blijvende impact. Het transformeren van gedurfde ideeën in tastbare resultaten vereist visie en vastberadenheid. Door ambitieuze dromen werkelijkheid te maken, bereiken we een significante en blijvende impact.",
+    "whyAlgoridam": "Waarom Algoridam",
+    "discoverOurTeam": "Ontdek ons team",
+    "services": [
+      "Mensgerichte innovatie",
+      "Saas Expert Only",
+      "Partner voor succes"
+    ],
+    "team": [
+      { "name": "Maishanu Ahidjo", "role": "CEO" },
+      { "name": "Jane Doe", "role": "CTO" },
+      { "name": "John Smith", "role": "Developer" }
+    ]
+  },
+  "services": {
+    "heading": "Van idee \n tot realisatie",
+    "intro": "Het transformeren van gedurfde ideeën in tastbare resultaten vereist visie en doorzettingsvermogen. \n Door ambitieuze dromen waar te maken, bereiken we een significante en blijvende impact.",
+    "services": [
+      {
+        "name": "Ontwerp",
+        "description": "We zijn gespecialiseerd in het creëren van maatwerk softwareoplossingen die bedrijven in staat stellen hun unieke doelen te bereiken."
+      },
+      {
+        "name": "Ontwikkeling",
+        "description": "We leveren robuuste, schaalbare en hoogwaardige softwareoplossingen, zorgvuldig ontwikkeld om aan uw unieke zakelijke behoeften te voldoen."
+      },
+      {
+        "name": "Beheer",
+        "description": "Ons uitgebreide softwarebeheer zorgt voor een naadloze werking, voortdurende verbetering en proactief onderhoud, waardoor uw systemen optimaal blijven functioneren."
+      }
+    ]
+  },
+  "caseStudies": {
+    "studies": [
+      {
+        "name": "Platr",
+        "description": "We zijn gespecialiseerd in het creëren van maatwerk softwareoplossingen die bedrijven in staat stellen hun unieke doelen te bereiken."
+      },
+      {
+        "name": "Platr",
+        "description": "We zijn gespecialiseerd in het creëren van maatwerk softwareoplossingen die bedrijven in staat stellen hun unieke doelen te bereiken."
+      },
+      {
+        "name": "Platr",
+        "description": "We zijn gespecialiseerd in het creëren van maatwerk softwareoplossingen die bedrijven in staat stellen hun unieke doelen te bereiken."
+      },
+      {
+        "name": "Platr",
+        "description": "We zijn gespecialiseerd in het creëren van maatwerk softwareoplossingen die bedrijven in staat stellen hun unieke doelen te bereiken."
+      }
+    ],
+    "heading": "Ontdek Onze \n Case Studies",
+    "intro": "Ontdek onze case studies en krijg inzicht in praktijkvoorbeelden van ons werk. \n Laat u inspireren door onze gedocumenteerde successen.",
+    "seeAllCasesButton": "Bekijk alle cases"
+  },
+  "processes": {
+    "heading": "Ons Proces",
+    "intro": "Wij zijn gespecialiseerd in het creëren van maatwerksoftwareoplossingen die bedrijven in staat stellen hun unieke doelen te bereiken.",
+    "process1": {
+      "name": "Projectaanvraag",
+      "description": "Onze samenwerking begint met jouw projectaanvraag, waardoor we helderheid krijgen over jouw behoeften en de compatibiliteit kunnen beoordelen. Als alles past, plannen we een."
+    },
+    "process2": {
+      "name": "Eerste Meeting",
+      "description": "Vertrouwen opbouwen is essentieel. In onze eerste meeting leren we elkaar kennen, bespreken we doelen en vereisten, beantwoorden we vragen en schetsen we de volgende stappen."
+    },
+    "process3": {
+      "name": "Planning & Uitvoering",
+      "description": "We definiëren projectmijlpalen, tijdlijnen en verwachtingen om een soepel proces van begin tot eind te garanderen."
+    }
+  },
+  "testimonials": {
+    "heading": "Wat klanten zeggen over ons",
+    "intro": "Ontdek waarom zij voor Algoridam kozen en hoe onze software hun levens heeft veranderd.",
+    "testimonial1": {
+      "quote": "Samenwerken met Algoridam is een game-changer voor ons bedrijf geweest.",
+      "name": "John Smith",
+      "position": "CEO van Tech Innovators Inc."
+    },
+    "testimonial2": {
+      "quote": "Algoridam leverde de beste op maat gemaakte softwareoplossing die we ooit hebben gezien.",
+      "name": "Sarah Lee",
+      "position": "Oprichter van Creative Solutions"
+    },
+    "testimonial3": {
+      "quote": "Het niveau van professionaliteit en expertise bij Algoridam was uitzonderlijk.",
+      "name": "Alex Brown",
+      "position": "Directeur bij Innovations Lab"
+    }
+  },
+  "contact": {
+    "heading": "Neem contact op",
+    "intro": "Wij staan jou graag te woord om een beeld te geven van alle mogelijkheden. Neem telefonisch contact op om direct de mogelijkheden te bespreken.",
+    "description": "We zijn enthousiast om van je te horen en te bespreken hoe we je kunnen helpen met je project of eventuele vragen kunnen beantwoorden.",
+    "fullNamePlaceholder": "Volledige naam",
+    "emailPlaceholder": "E-mail",
+    "messagePlaceholder": "Bericht",
+    "buttonText": "Start een project"
+  },
+  "footer": {
+    "copyRight":  "Alle rechten voorbehouden"
+  }
+}
